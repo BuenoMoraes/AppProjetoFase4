@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "9pieyoIhQM4Tp8vDk8Puae+Km65N19V+idQS8N1nNYM4JHO7LzIwzJHFMgwArUcDk2XwCHnRKE2HE9KKoiSDsg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\TMax\\source\\repos\\AppProjetoFase4\\AppProjetoFase4\\AppProjetoFase4\\AppProjetoFase4.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\TMax\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\TMax\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\TMax\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\TMax\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\TMax\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\TMax\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}

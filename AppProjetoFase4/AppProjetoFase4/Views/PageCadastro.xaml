@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppProjetoFase4.PageCadastro"
+             Title="Cadastro">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" Margin="64">
+            <Image Source="icon.jpg"></Image>
+            <Entry Placeholder="Nome" x:Name="enNome"></Entry>
+            <Entry Placeholder="Email" x:Name="enUsuario"></Entry>
+            <Entry Placeholder="Senha" x:Name="enSenha" IsPassword="True"></Entry>
+            
+            <Button x:Name="btnCadastro" Text="Cadastre-se" Clicked="btnCadastro_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

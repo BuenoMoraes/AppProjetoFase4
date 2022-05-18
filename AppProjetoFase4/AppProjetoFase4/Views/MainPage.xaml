@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppProjetoFase4.MainPage"
+             Title="Login">
+
+    <StackLayout VerticalOptions="Center" Margin="64">
+        <Image Source="biblioteca.jpg"></Image>
+        <Entry Placeholder="Usuário" x:Name="enUsuario"></Entry>
+        <!--Text="{Binding Usuario}"-->
+        <Entry Placeholder="Senha" x:Name="enSenha" IsPassword="True"></Entry>
+        <!--Text="{Binding Senha}"-->
+        <Button x:Name="btnAuthLogin" Text="Entrar" Clicked="btnAuthLogin_Clicked"/>
+
+        <Label Text="Não possui um cadastro?"/>
+        <Button x:Name="btnCadastro" Text="Cadastre-se" Clicked="btnCadastro_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
