@@ -24,14 +24,31 @@ namespace AppProjetoFase4.Views
         protected async override void OnAppearing()
         {
             base.OnAppearing();
-
-            await this.ViewModel.GetLivros();
+            try
+            {
+                await this.ViewModel.GetLivros();
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Erro", "Erro no carregamento da lista de livros", "Voltar");
+            }
+            
 
         }
 
         private void ButtonUsuarios_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new ListagemViewUsuario());
+        }
+
+        private void ButtonReservas_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ListagemViewReserva());
+        }
+
+        private void ButtonLivros_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ListagemViewLivro());
         }
     }
 }

@@ -11,6 +11,8 @@ namespace AppProjetoFase4.ViewModels
 {
     public class ListagemViewModel : BaseViewModel
     {
+        string nameUsuario = "usuario";
+        string tituloLivro = "titulo";
 
         const string URL_GET_LIVROS = "http://192.168.0.47:8000/api/livros";
         const string URL_GET_RESERVAS = "http://192.168.0.47:8000/api/reservas";
@@ -18,6 +20,7 @@ namespace AppProjetoFase4.ViewModels
         
         public ObservableCollection<Livro> Livros { get; set; }
         public ObservableCollection<Usuario> Usuarios { get; set; }
+        public ObservableCollection<Reserva> Reservas { get; set; }
 
         private bool aguarde;
         public bool Aguarde
@@ -34,6 +37,7 @@ namespace AppProjetoFase4.ViewModels
         {
             this.Livros = new ObservableCollection<Livro>();
             this.Usuarios = new ObservableCollection<Usuario>();
+            this.Reservas = new ObservableCollection<Reserva>();
         }
 
 
@@ -84,6 +88,48 @@ namespace AppProjetoFase4.ViewModels
 
             Aguarde = false;
         }
+
+        public async Task GetReservas()
+        {
+            Aguarde = true;
+            HttpClient httpClient = new HttpClient();
+            var resultadoLivros = await httpClient.GetStringAsync(URL_GET_LIVROS);
+            var resultadoUsuario = await httpClient.GetStringAsync(URL_GET_USUARIOS);
+            var resultadoReservas= await httpClient.GetStringAsync(URL_GET_RESERVAS);
+
+            var livrosJson = JsonConvert.DeserializeObject<LivrosJson[]>(resultadoLivros);
+            var usuariosJson = JsonConvert.DeserializeObject<UsuarioJson[]>(resultadoUsuario);
+            var reservasJson = JsonConvert.DeserializeObject<ReservasJson[]>(resultadoReservas);
+
+            foreach (var reservaJson in reservasJson)
+            {
+                foreach (var livroJson in livrosJson)
+                {
+                    foreach (var usuarioJson in usuariosJson)
+                    {
+                        if((reservaJson.usuario_id == usuarioJson.id) && (livroJson.id == reservaJson.livro_id))
+                        {
+                            Console.WriteLine("reservaID" + reservaJson.usuario_id);
+                            Console.WriteLine("usuarioJsonID" + usuarioJson.id);
+                            Console.WriteLine("livroJsonID" + livroJson.id);
+                            Console.WriteLine("reservalivro_id" + reservaJson.livro_id);
+                            this.Reservas.Add(new Reserva
+                            {
+                                titulo_livro = livroJson.titulo,
+                                name_usuario = usuarioJson.name
+                            });
+                        }
+
+                        
+
+                        //Console.WriteLine("Livro recebido");
+
+                    }
+                }
+            }
+
+            Aguarde = false;
+        }
     }
 
     class LivrosJson
@@ -96,6 +142,12 @@ namespace AppProjetoFase4.ViewModels
     {
         public string name{ get; set; }
         public string id { get; set; }
+    }
+
+    class ReservasJson
+    {
+        public string livro_id { get; set; }
+        public string usuario_id { get; set; }
     }
 }
 

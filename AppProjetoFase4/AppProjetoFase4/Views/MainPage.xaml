@@ -12,7 +12,7 @@
         <!--Text="{Binding Senha}"-->
         <Button x:Name="btnAuthLogin" Text="Entrar" Clicked="btnAuthLogin_Clicked"/>
 
-        <Label Text="Não possui um cadastro?"/>
+        <Label Text="Não possui um cadastro?" HorizontalOptions="Center"/>
         <Button x:Name="btnCadastro" Text="Cadastre-se" Clicked="btnCadastro_Clicked"/>
     </StackLayout>
 

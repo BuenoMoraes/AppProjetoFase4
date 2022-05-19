@@ -1,14 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppProjetoFase4.Views.ListagemViewUsuario">
+             x:Class="AppProjetoFase4.Views.ListagemViewUsuario"
+             Title="Usuários">
     <ContentPage.Content>
         <StackLayout Margin="25">
             <ActivityIndicator IsRunning="{Binding Aguarde}"
                            IsVisible="{Binding Aguarde}">
             </ActivityIndicator>
             <StackLayout Orientation="Horizontal">
-                <Button Text ="Reservas"  FontSize="20" HorizontalOptions="StartAndExpand" TextColor="Black"></Button>
+                <Button Text ="Reservas" Clicked="ButtonReservas_Clicked" FontSize="20" HorizontalOptions="StartAndExpand" TextColor="Black"></Button>
                 <Button Text ="Livros" Clicked="ButtonLivros_Clicked" FontSize="20" HorizontalOptions="EndAndExpand" TextColor="Black"></Button>
             </StackLayout>
             <ListView x:Name="listViewUsuario" 
@@ -26,6 +27,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <Button Text="Adicionar usuário" Clicked="ButtonUsuarios_Clicked" HorizontalOptions="FillAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

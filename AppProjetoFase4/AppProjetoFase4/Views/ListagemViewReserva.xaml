@@ -1,33 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppProjetoFase4.Views.ListagemViewLivro"
-             Title="Livros">
+             x:Class="AppProjetoFase4.Views.ListagemViewReserva">
     <ContentPage.Content>
         <StackLayout Margin="25">
             <ActivityIndicator IsRunning="{Binding Aguarde}"
                            IsVisible="{Binding Aguarde}">
             </ActivityIndicator>
             <StackLayout Orientation="Horizontal">
-                <Button Text ="Reservas" Clicked="ButtonReservas_Clicked" HorizontalOptions="StartAndExpand" TextColor="Black"></Button>
+                <Button Text ="Livros"  Clicked="ButtonLivros_Clicked" HorizontalOptions="StartAndExpand" TextColor="Black"></Button>
                 <Button Text ="Usuários" Clicked="ButtonUsuarios_Clicked" HorizontalOptions="EndAndExpand" TextColor="Black"></Button>
             </StackLayout>
-            <ListView x:Name="listViewLivros" 
-              ItemsSource="{Binding Livros}">
-              <!--SelectedItem="{Binding VeiculoSelecionado}"--> 
+            <ListView x:Name="listViewReservas" 
+              ItemsSource="{Binding Reservas}">
+                <!--SelectedItem="{Binding VeiculoSelecionado}"-->
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.View>
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding titulo}" FontSize="18" VerticalTextAlignment="Center" TextColor="Black"></Label>
+                                    <Label Text="{Binding name_usuario}" FontSize="18" VerticalTextAlignment="Center" TextColor="Black"></Label>
+                                    <Label Text="-" FontSize="18" VerticalTextAlignment="Center" TextColor="Black"></Label>
+                                    <Label Text="{Binding titulo_livro}" FontSize="18" VerticalTextAlignment="Center" TextColor="Black"></Label>
                                 </StackLayout>
                             </ViewCell.View>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Button Text="Adicionar livro" Clicked="ButtonLivros_Clicked" HorizontalOptions="FillAndExpand" />
+            <Button Text="Adicionar reserva" HorizontalOptions="FillAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
