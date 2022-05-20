@@ -28,7 +28,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Button Text="Adicionar reserva" HorizontalOptions="FillAndExpand" />
+            <Button Text="Adicionar reserva" Clicked="ButtonReservas_Clicked"  HorizontalOptions="FillAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

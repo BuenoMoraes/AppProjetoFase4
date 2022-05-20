@@ -11,9 +11,6 @@ namespace AppProjetoFase4.ViewModels
 {
     public class ListagemViewModel : BaseViewModel
     {
-        string nameUsuario = "usuario";
-        string tituloLivro = "titulo";
-
         const string URL_GET_LIVROS = "http://192.168.0.47:8000/api/livros";
         const string URL_GET_RESERVAS = "http://192.168.0.47:8000/api/reservas";
         const string URL_GET_USUARIOS = "http://192.168.0.47:8000/api/registros";
@@ -81,9 +78,6 @@ namespace AppProjetoFase4.ViewModels
                     name = usuarioJson.name,
                     id = usuarioJson.id
                 });
-
-                //Console.WriteLine("Livro recebido");
-
             }
 
             Aguarde = false;
@@ -119,11 +113,6 @@ namespace AppProjetoFase4.ViewModels
                                 name_usuario = usuarioJson.name
                             });
                         }
-
-                        
-
-                        //Console.WriteLine("Livro recebido");
-
                     }
                 }
             }

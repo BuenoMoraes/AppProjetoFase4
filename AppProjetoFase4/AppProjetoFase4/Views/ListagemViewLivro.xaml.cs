@@ -48,7 +48,7 @@ namespace AppProjetoFase4.Views
 
         private void ButtonLivros_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ListagemViewLivro());
+            Navigation.PushAsync(new PageAddLivro());
         }
     }
 }

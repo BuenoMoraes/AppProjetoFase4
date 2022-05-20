@@ -9,8 +9,8 @@
                            IsVisible="{Binding Aguarde}">
             </ActivityIndicator>
             <StackLayout Orientation="Horizontal">
-                <Button Text ="Reservas" Clicked="ButtonReservas_Clicked" FontSize="20" HorizontalOptions="StartAndExpand" TextColor="Black"></Button>
-                <Button Text ="Livros" Clicked="ButtonLivros_Clicked" FontSize="20" HorizontalOptions="EndAndExpand" TextColor="Black"></Button>
+                <Button Text ="Reservas" Clicked="ButtonReservas_Clicked" HorizontalOptions="StartAndExpand" TextColor="Black"></Button>
+                <Button Text ="Livros" Clicked="ButtonLivros_Clicked" HorizontalOptions="EndAndExpand" TextColor="Black"></Button>
             </StackLayout>
             <ListView x:Name="listViewUsuario" 
               ItemsSource="{Binding Usuarios}">

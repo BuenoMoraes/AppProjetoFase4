@@ -17,3 +17,5 @@ C:\Users\TMax\source\repos\AppProjetoFase4\AppProjetoFase4\AppProjetoFase4\obj\D
 C:\Users\TMax\source\repos\AppProjetoFase4\AppProjetoFase4\AppProjetoFase4\obj\Debug\netstandard2.0\Views\ListagemViewLivro.xaml.g.cs
 C:\Users\TMax\source\repos\AppProjetoFase4\AppProjetoFase4\AppProjetoFase4\obj\Debug\netstandard2.0\Views\ListagemViewUsuario.xaml.g.cs
 C:\Users\TMax\source\repos\AppProjetoFase4\AppProjetoFase4\AppProjetoFase4\obj\Debug\netstandard2.0\Views\ListagemViewReserva.xaml.g.cs
+C:\Users\TMax\source\repos\AppProjetoFase4\AppProjetoFase4\AppProjetoFase4\obj\Debug\netstandard2.0\Views\PageAddLivro.xaml.g.cs
+C:\Users\TMax\source\repos\AppProjetoFase4\AppProjetoFase4\AppProjetoFase4\obj\Debug\netstandard2.0\Views\PageAddReserva.xaml.g.cs

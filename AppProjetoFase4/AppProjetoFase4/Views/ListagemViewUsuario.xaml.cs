@@ -28,7 +28,6 @@ namespace AppProjetoFase4.Views
 
             try
             {
-
                 await this.ViewModel.GetUsuarios();
             }
             catch (Exception ex)

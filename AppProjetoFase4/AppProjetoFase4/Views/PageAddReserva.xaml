@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppProjetoFase4.Views.PageAddReserva">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" Margin="64">
+            <!--<Image Source=""></Image>-->
+            <Entry Placeholder="Título" x:Name="enLivro"></Entry>
+            <Entry Placeholder="Usuario" x:Name="enUsuario"></Entry>
+            <Entry Placeholder="Inicio" x:Name="enInicio"></Entry>
+            <Entry Placeholder="Termino" x:Name="enTermino"></Entry>
+
+            <Button x:Name="btnAddReserva" Text="Adicionar Reserva" Clicked="btnAddReserva_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

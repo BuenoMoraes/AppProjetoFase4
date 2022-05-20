@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppProjetoFase4.Views.PageAddLivro">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" Margin="64">
+            <Image Source=""></Image>
+            <Entry Placeholder="Título" x:Name="enTitulo"></Entry>
+
+            <Picker x:Name="pkAutor" Title="Selecione o autor">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Fred Brooks</x:String>
+                        <x:String>Paulo Coelho</x:String>
+                        <x:String>Dustin Boswell</x:String>
+                        <x:String>Robert C. Martin</x:String>
+                        <x:String>Bob Martin</x:String>
+                        <x:String>J. K. Rowling</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            
+            <Entry Placeholder="Autor" x:Name="enAutorId"></Entry>
+            <Entry Placeholder="Ano Publicação" x:Name="enAnoPublicacao"></Entry>
+            
+            <Picker x:Name="pkStatus" Title="Selecione o status do livro">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Disponível</x:String>
+                        <x:String>Alugado</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Button x:Name="btnAddLivro" Text="Adicionar Livro" Clicked="btnAddLivro_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
