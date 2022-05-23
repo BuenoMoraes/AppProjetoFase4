@@ -70,9 +70,9 @@ namespace AppProjetoFase4.Views
                 var camposFormulario = new FormUrlEncodedContent(new[]
                 {
                         new KeyValuePair<string, string>("titulo", enTitulo.Text),
-                        new KeyValuePair<string, string>("autor_id", Convert.ToString(autor)/*enAutorId.Text*/),
+                        new KeyValuePair<string, string>("autor_id", Convert.ToString(autor)),
                         new KeyValuePair<string, string>("anoPublicacao",enAnoPublicacao.Text),
-                        new KeyValuePair<string, string>("status_id", Convert.ToString(status)/*enAnoPublicacao.Text*/)
+                        new KeyValuePair<string, string>("status_id", Convert.ToString(status))
                     });
                 var httpResponseMessage = await httpClient.PostAsync("http://192.168.0.47:8000/api/livros", camposFormulario);
                 Console.WriteLine(httpResponseMessage);
@@ -80,7 +80,7 @@ namespace AppProjetoFase4.Views
                 if (httpResponseMessage.IsSuccessStatusCode)
                 {
                     await DisplayAlert("Livro cadastrado", "Livro cadastrado com sucesso", "Ok");
-                    await Navigation.PushAsync(new ListagemViewLivro()); 
+                    await Navigation.PushAsync(new ListagemMain()); 
                 }
                 else
                 {

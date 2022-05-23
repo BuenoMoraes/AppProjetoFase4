@@ -2,32 +2,47 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppProjetoFase4.Views.ListagemViewLivro"
-             Title="Livros">
+             Title="Livros"
+             BackgroundColor="LightGray">
     <ContentPage.Content>
-        <StackLayout Margin="25">
+        <StackLayout Margin="15">
             <ActivityIndicator IsRunning="{Binding Aguarde}"
                            IsVisible="{Binding Aguarde}">
             </ActivityIndicator>
-            <StackLayout Orientation="Horizontal">
-                <Button Text ="Reservas" Clicked="ButtonReservas_Clicked" HorizontalOptions="StartAndExpand" TextColor="Black"></Button>
-                <Button Text ="Usuários" Clicked="ButtonUsuarios_Clicked" HorizontalOptions="EndAndExpand" TextColor="Black"></Button>
-            </StackLayout>
-            <ListView x:Name="listViewLivros" 
-              ItemsSource="{Binding Livros}">
-              <!--SelectedItem="{Binding VeiculoSelecionado}"--> 
+            <ListView x:Name="listViewLivros"
+                      BackgroundColor="Transparent"
+                      ItemsSource="{Binding Livros}"
+                      HasUnevenRows="True"
+                      SeparatorVisibility="None">
+                <!--SelectedItem="{Binding VeiculoSelecionado}"-->
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <ViewCell.View>
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding titulo}" FontSize="18" VerticalTextAlignment="Center" TextColor="Black"></Label>
-                                </StackLayout>
-                            </ViewCell.View>
+                            <!---->
+                            <Grid Padding="10" >
+                                <Frame CornerRadius="20"
+                                       HasShadow="True">
+                                    <StackLayout Orientation="Horizontal" >
+                                        <Image Source="livroIcon.jpg" WidthRequest="66"/>
+                                        <StackLayout>
+                                            <Label Text="{Binding titulo}" FontAttributes="Bold" VerticalOptions="Center"  FontSize="Medium" TextColor="Black"></Label>
+                                            <Label Text="{Binding id}" VerticalOptions="Center"  FontSize="Medium"></Label>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Button Text="Adicionar livro" Clicked="ButtonLivros_Clicked" HorizontalOptions="FillAndExpand" />
+            <Button Text="Adicionar livro" Clicked="ButtonLivros_Clicked" CornerRadius="20" BackgroundColor="White" HorizontalOptions="FillAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
+
+
+<!--<ViewCell.View>
+    <StackLayout>
+        <Label Text="{Binding titulo}" VerticalOptions="Center"  FontSize="18" VerticalTextAlignment="Center" TextColor="Black"></Label>
+    </StackLayout>
+    </ViewCell.View> -->

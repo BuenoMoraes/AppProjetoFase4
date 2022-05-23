@@ -20,7 +20,6 @@
                 </Picker.ItemsSource>
             </Picker>
             
-            <Entry Placeholder="Autor" x:Name="enAutorId"></Entry>
             <Entry Placeholder="Ano Publicação" x:Name="enAnoPublicacao"></Entry>
             
             <Picker x:Name="pkStatus" Title="Selecione o status do livro">

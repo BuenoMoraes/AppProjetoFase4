@@ -60,7 +60,7 @@ namespace AppProjetoFase4
                 }
                 else
                 {
-                    await Navigation.PushAsync(new ListagemViewLivro());
+                    await Navigation.PushAsync(new ListagemMain());
                 }
             }
            

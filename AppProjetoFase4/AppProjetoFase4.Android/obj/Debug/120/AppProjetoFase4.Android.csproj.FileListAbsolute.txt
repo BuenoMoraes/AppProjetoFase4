@@ -630,3 +630,5 @@ C:\Users\TMax\source\repos\AppProjetoFase4\AppProjetoFase4\AppProjetoFase4.Andro
 C:\Users\TMax\source\repos\AppProjetoFase4\AppProjetoFase4\AppProjetoFase4.Android\obj\Debug\120\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\TMax\source\repos\AppProjetoFase4\AppProjetoFase4\AppProjetoFase4.Android\obj\Debug\120\android\assets\Newtonsoft.Json.dll
 C:\Users\TMax\source\repos\AppProjetoFase4\AppProjetoFase4\AppProjetoFase4.Android\obj\Debug\120\res\drawable\icon.jpg
+C:\Users\TMax\source\repos\AppProjetoFase4\AppProjetoFase4\AppProjetoFase4.Android\obj\Debug\120\res\drawable\livro.jpg
+C:\Users\TMax\source\repos\AppProjetoFase4\AppProjetoFase4\AppProjetoFase4.Android\obj\Debug\120\res\drawable\livroicon.jpg
