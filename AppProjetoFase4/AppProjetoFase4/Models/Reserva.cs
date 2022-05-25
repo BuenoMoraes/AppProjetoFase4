@@ -11,7 +11,33 @@ namespace AppProjetoFase4.Models
         public string livro_id { get; set; }
         public string titulo_livro{ get; set; }
 
-        public string inicio { get; set; }
+        //public string inicio { get; set; }
         public string termino { get; set; }
+
+        DateTime inicio = DateTime.Today;
+        public DateTime DataInicio
+        {
+            get
+            {
+                return inicio;
+            }
+            set
+            {
+                inicio = value;
+            }
+        }
+
+        DateTime dataTermino = DateTime.Today;
+        public DateTime DataTermino
+        {
+            get
+            {
+                return dataTermino;
+            }
+            set
+            {
+                dataTermino = value;
+            }
+        }
     }
 }

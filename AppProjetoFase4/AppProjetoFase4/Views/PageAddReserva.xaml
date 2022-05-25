@@ -5,11 +5,23 @@
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center" Margin="64">
             <!--<Image Source=""></Image>-->
-            <Entry Placeholder="Título" x:Name="enLivro"></Entry>
-            <Entry Placeholder="Usuario" x:Name="enUsuario"></Entry>
-            <Entry Placeholder="Inicio" x:Name="enInicio"></Entry>
-            <Entry Placeholder="Termino" x:Name="enTermino"></Entry>
+            <Entry Placeholder="Usuário" x:Name="enUsuario"></Entry>
+            <Entry Placeholder="Livro" x:Name="enLivro"></Entry>
+            <Label Text="Inicio Reserva"/>
+            <DatePicker
+               x:Name="startDatePicker"
+               MinimumDate="01/01/1970" 
+               MaximumDate="01/01/2100"
+               Format="dd/MM/yyyy"
+            />
 
+            <Label Text="Termino Reserva"/>
+            <DatePicker
+               x:Name="endDatePicker"
+               MinimumDate="01/01/1970" 
+               MaximumDate="01/01/2100"
+               Format="dd/MM/yyyy"
+            />
             <Button x:Name="btnAddReserva" Text="Adicionar Reserva" Clicked="btnAddReserva_Clicked"/>
         </StackLayout>
     </ContentPage.Content>

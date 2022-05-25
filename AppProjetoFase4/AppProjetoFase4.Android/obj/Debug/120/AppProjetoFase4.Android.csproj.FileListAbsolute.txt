@@ -632,3 +632,5 @@ C:\Users\TMax\source\repos\AppProjetoFase4\AppProjetoFase4\AppProjetoFase4.Andro
 C:\Users\TMax\source\repos\AppProjetoFase4\AppProjetoFase4\AppProjetoFase4.Android\obj\Debug\120\res\drawable\icon.jpg
 C:\Users\TMax\source\repos\AppProjetoFase4\AppProjetoFase4\AppProjetoFase4.Android\obj\Debug\120\res\drawable\livro.jpg
 C:\Users\TMax\source\repos\AppProjetoFase4\AppProjetoFase4\AppProjetoFase4.Android\obj\Debug\120\res\drawable\livroicon.jpg
+C:\Users\TMax\source\repos\AppProjetoFase4\AppProjetoFase4\AppProjetoFase4.Android\obj\Debug\120\res\drawable\iconperson.jpg
+C:\Users\TMax\source\repos\AppProjetoFase4\AppProjetoFase4\AppProjetoFase4.Android\obj\Debug\120\res\drawable\iconagenda.jpg

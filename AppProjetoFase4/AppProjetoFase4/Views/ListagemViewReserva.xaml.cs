@@ -36,19 +36,9 @@ namespace AppProjetoFase4.Views
 
         }
 
-        private void ButtonUsuarios_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new ListagemViewUsuario());
-        }
-
-        private void ButtonLivros_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new ListagemViewLivro());
-        }
-
         private void ButtonReservas_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ListagemViewReserva());
+            Navigation.PushAsync(new PageAddReserva());
         }
     }
 }

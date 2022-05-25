@@ -34,6 +34,7 @@ namespace AppProjetoFase4
                 if (httpResponseMessage.IsSuccessStatusCode)
                 {
                     await DisplayAlert("Cadastro realizado", "Cadastro realizado com sucesso", "Ok");
+                    await Navigation.PushAsync(new MainPage());
                 }
                 else
                 {

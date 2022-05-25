@@ -14,7 +14,7 @@ namespace AppProjetoFase4.ViewModels
         const string URL_GET_LIVROS = "http://192.168.0.47:8000/api/livros";
         const string URL_GET_RESERVAS = "http://192.168.0.47:8000/api/reservas";
         const string URL_GET_USUARIOS = "http://192.168.0.47:8000/api/registros";
-        
+
         public ObservableCollection<Livro> Livros { get; set; }
         public ObservableCollection<Usuario> Usuarios { get; set; }
         public ObservableCollection<Reserva> Reservas { get; set; }
@@ -47,17 +47,20 @@ namespace AppProjetoFase4.ViewModels
 
             var livrosJson = JsonConvert.DeserializeObject<LivrosJson[]>(resultado);
 
+
+            this.Livros.Clear();
+
             foreach (var livroJson in livrosJson)
-            {
-                this.Livros.Add(new Livro
                 {
-                    titulo = livroJson.titulo,
-                    id = livroJson.id
-                });
+                    this.Livros.Add(new Livro
+                    {
+                        titulo = livroJson.titulo,
+                        id = livroJson.id
+                    });
 
-                Console.WriteLine("Livro recebido");
+                    Console.WriteLine("Livro recebido");
 
-            }
+                }
 
             Aguarde = false;
         }
@@ -70,6 +73,8 @@ namespace AppProjetoFase4.ViewModels
             var resultado = await httpClient.GetStringAsync(URL_GET_USUARIOS);
 
             var usuariosJson = JsonConvert.DeserializeObject<UsuarioJson[]>(resultado);
+
+            this.Usuarios.Clear();
 
             foreach (var usuarioJson in usuariosJson)
             {
@@ -94,6 +99,8 @@ namespace AppProjetoFase4.ViewModels
             var livrosJson = JsonConvert.DeserializeObject<LivrosJson[]>(resultadoLivros);
             var usuariosJson = JsonConvert.DeserializeObject<UsuarioJson[]>(resultadoUsuario);
             var reservasJson = JsonConvert.DeserializeObject<ReservasJson[]>(resultadoReservas);
+
+            this.Reservas.Clear();
 
             foreach (var reservaJson in reservasJson)
             {

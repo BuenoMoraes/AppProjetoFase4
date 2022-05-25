@@ -2,32 +2,39 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppProjetoFase4.Views.ListagemViewUsuario"
-             Title="Usuários">
+             Title="Usuários"
+             BackgroundColor="LightGray">
     <ContentPage.Content>
         <StackLayout Margin="25">
             <ActivityIndicator IsRunning="{Binding Aguarde}"
                            IsVisible="{Binding Aguarde}">
             </ActivityIndicator>
-            <StackLayout Orientation="Horizontal">
-                <Button Text ="Reservas" Clicked="ButtonReservas_Clicked" HorizontalOptions="StartAndExpand" TextColor="Black"></Button>
-                <Button Text ="Livros" Clicked="ButtonLivros_Clicked" HorizontalOptions="EndAndExpand" TextColor="Black"></Button>
-            </StackLayout>
             <ListView x:Name="listViewUsuario" 
-              ItemsSource="{Binding Usuarios}">
+                      BackgroundColor="Transparent"
+                      ItemsSource="{Binding Usuarios}"
+                      HasUnevenRows="True"
+                      SeparatorVisibility="None">
                 <!--SelectedItem="{Binding VeiculoSelecionado}"-->
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <ViewCell.View>
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding name}" FontSize="18" VerticalTextAlignment="Center" TextColor="Black"></Label>
-                                </StackLayout>
-                            </ViewCell.View>
+                            <Grid Padding="10" >
+                                <Frame CornerRadius="20"
+                                       HasShadow="True">
+                                    <StackLayout Orientation="Horizontal" >
+                                        <Image Source="iconPerson.jpg" WidthRequest="66"/>
+                                        <StackLayout>
+                                            <Label Text="{Binding name}" FontAttributes="Bold" VerticalOptions="Center"  FontSize="Medium" TextColor="Black"></Label>
+                                            <Label Text="{Binding id}" VerticalOptions="Center"  FontSize="Medium"></Label>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Button Text="Adicionar usuário" Clicked="ButtonUsuarios_Clicked" HorizontalOptions="FillAndExpand" />
+            <Button Text="Adicionar usuário" Clicked="ButtonUsuarios_Clicked" CornerRadius="20" BackgroundColor="White" HorizontalOptions="FillAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
